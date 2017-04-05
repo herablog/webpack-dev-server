@@ -91,9 +91,10 @@ if(!options.outputPath)
 	options.outputPath = "/";
 if(!options.filename)
 	options.filename = firstWpOpt.output && firstWpOpt.output.filename;
-[].concat(wpOpt).forEach(function(wpOpt) {
-	wpOpt.output.path = "/";
-});
+// ref https://github.com/webpack/webpack-dev-server/commit/4df2fb534327a617746be19f2dc5f2402a886829
+// [].concat(wpOpt).forEach(function(wpOpt) {
+// 	wpOpt.output.path = "/";
+// });
 
 if(!options.watchOptions)
 	options.watchOptions = firstWpOpt.watchOptions;
